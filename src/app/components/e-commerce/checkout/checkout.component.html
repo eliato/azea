@@ -1,0 +1,304 @@
+<app-page-header [title]="'Checkout'" [items]="['eCommerce']" [active_item]="'Checkout'"></app-page-header>
+<!-- Row -->
+<div class="row">
+    <div class="col-xl-12">
+        <div class="card custom-card">
+            <div class="card-header">
+                <h3 class="card-title">
+                    <label class="main-content-label mb-2">Checkout</label>
+                </h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-xl-6 mx-auto">
+                        <div class="checkout-steps wrapper">
+                            <div id="checkoutsteps">
+                                <aw-wizard #wizard>
+                                    <aw-wizard-step [stepTitle]="'Steptitle 1'">
+                                        <form #firstStep="ngForm" novalidate>
+                                            <h5 class="text-start mb-2">Sign in to Your Account</h5>
+                                            <p class="mb-4 text-muted tx-13 ms-0 text-start">Sign in to create, discover
+                                                and connect with the global community</p>
+                                            <div class="form-group text-start">
+                                                <label for="email">Email</label>
+                                                <input class="form-control input-md" ngModel #email="ngModel" required
+                                                    email id="email" name="email" type="email">
+                                                <small class="form-text text-danger"
+                                                    *ngIf="!email.valid && (email.dirty || email.touched)">Please enter
+                                                    a valid
+                                                    email!</small>
+                                            </div>
+                                            <div class="form-group text-start">
+                                                <label class="form-control-label" for="password">Password</label>
+                                                <input class="form-control" ngModel #password="ngModel" required
+                                                    id="password" name="password" type="password">
+                                                <small class="form-text text-danger"
+                                                    *ngIf="!password.valid && (password.dirty || password.touched)">This
+                                                    field is
+                                                    required!</small>
+                                            </div>
+
+                                            <!-- <button class="btn btn-primary btn-block">Sign In</button> -->
+
+                                            <div class="form-group">
+                                                <button type="button" class="btn btn-primary pull-end"
+                                                    [disabled]="!firstStep.valid" awNextStep>
+                                                    Next
+                                                </button>
+                                            </div>
+
+                                        </form>
+                                    </aw-wizard-step>
+                                    <aw-wizard-step [stepTitle]="'Steptitle 2'">
+                                        <form #secondStep="ngForm" novalidate>
+
+                                            <h5 class="text-start mb-2">Billing Information</h5>
+                                            <p class="mb-4 text-muted tx-13 ms-0 text-start">Lorem Ipsum has been the
+                                                industry's standard dummy text ever since</p>
+                                            <div class="row">
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="firstname">First name</label>
+                                                    <input class="form-control" ngModel #firstname="ngModel" required
+                                                        id="firstname" name="firstname" type="text" placeholder="Johan">
+                                                    <small class="form-text text-danger"
+                                                        *ngIf="!firstname.valid && (firstname.dirty || firstname.touched)">This
+                                                        field is
+                                                        required!</small>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="lastname">Last name</label>
+                                                    <input class="form-control input-md" ngModel #lastname="ngModel"
+                                                        required id="lastname" name="lastname" type="text"
+                                                        placeholder="Deo">
+                                                    <small class="form-text text-danger"
+                                                        *ngIf="!lastname.valid && (lastname.dirty || lastname.touched)">This
+                                                        field is
+                                                        required!</small>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="address">Address</label>
+                                                <input type="text" class="form-control" id="address"
+                                                    placeholder="1234 Main St" required="">
+                                                <div class="invalid-feedback">Please enter your shipping address.</div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="address2">Address 2 <span
+                                                        class="text-muted">(Optional)</span>
+                                                </label>
+                                                <input type="text" class="form-control" id="address2"
+                                                    placeholder="Apartment or suite">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="contact">Mobile Number</label>
+                                                <input class="form-control input-md" ngModel #contact="ngModel" required
+                                                    contact id="contact" name="contact" type="number"
+                                                    placeholder="123456789">
+                                                <small class="form-text text-danger"
+                                                    *ngIf="!contact.valid && (contact.dirty || contact.touched)">This
+                                                    field is
+                                                    required!</small>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-5 mb-3">
+                                                    <label for="country">Country</label>
+                                                    <ng-select class="d-block w-100" id="country"
+                                                        required="">
+                                                        <ng-option value="us">United States</ng-option>
+                                                    </ng-select>
+                                                    <div class="invalid-feedback">Please select a valid country.</div>
+                                                </div>
+                                                <div class="col-md-4 mb-3">
+                                                    <label for="state">State</label>
+                                                    <ng-select class="d-block w-100" id="state" required="">
+                                                        <ng-option value="cal">California</ng-option>
+                                                    </ng-select>
+                                                    <div class="invalid-feedback">Please provide a valid state.</div>
+                                                </div>
+                                                <div class="col-md-3 mb-3">
+                                                    <label for="zip">Zip</label>
+                                                    <input type="text" class="form-control" id="zip" placeholder=""
+                                                        required="">
+                                                    <div class="invalid-feedback">Zip code required.</div>
+                                                </div>
+                                            </div>
+                                            <hr class="mb-4">
+
+                                            <div class="form-group">
+                                                <button type="button" class="btn btn-primary pull-right"
+                                                    [disabled]="!secondStep.valid" awNextStep>
+                                                    Continue to checkout
+                                                </button>
+                                                <button type="button" class="btn btn-secondary ms-1"
+                                                    awPreviousStep>
+                                                    Previous</button>
+                                            </div>
+                                        </form>
+                                    </aw-wizard-step>
+                                    <aw-wizard-step [stepTitle]="'Steptitle 3'">
+                                        <form #thirdStep="ngForm" novalidate>
+                                            <h4>Order</h4>
+                                            <section>
+                                                <h5 class="text-start mb-2">Your Order</h5>
+                                                <p class="mb-4 text-muted tx-13 ms-0 text-start">Lorem Ipsum has been
+                                                    the industry's standard dummy text ever since</p>
+                                                <div class="product">
+                                                    <div class="item">
+                                                        <div class="left"> <a href="javascript:void(0);" class="thumb">
+                                                                <img src="../../assets/images/orders/3.jpg" alt=""> </a>
+                                                            <div class="purchase">
+                                                                <h6> <a href="javascript:void(0);">Cosmetics</a> </h6>
+                                                                <span>1</span>
+                                                            </div>
+                                                        </div> <span class="price">$290</span>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="left"> <a href="javascript:void(0);" class="thumb">
+                                                                <img src="../../assets/images/orders/5.jpg" alt=""> </a>
+                                                            <div class="purchase">
+                                                                <h6> <a href="javascript:void(0);">Shoe</a> </h6>
+                                                                <span>1</span>
+                                                            </div>
+                                                        </div> <span class="price">$124</span>
+                                                    </div>
+                                                </div>
+                                                <div class="checkout">
+                                                    <div class="subtotal"> <span class="heading">Subtotal</span> <span
+                                                            class="total tx-20 font-weight-bold">$364</span> </div>
+                                                </div>
+                                            </section>
+
+                                            <div class="form-group">
+                                                <button type="button" class="btn btn-primary pull-right"
+                                                    [disabled]="!thirdStep.valid" awNextStep>
+                                                    Next
+                                                </button>
+                                                <button type="button" class="btn btn-secondary ms-1"
+                                                    awPreviousStep>
+                                                    Previous</button>
+                                            </div>
+
+                                        </form>
+
+                                    </aw-wizard-step>
+                                    <aw-wizard-completion-step stepTitle="Step 4" awEnableBackLinks>
+                                        <form #fourthStep="ngForm" novalidate>
+                                            <h4>Payments</h4>
+                                            <section>
+                                                <div class="">
+                                                    <h5 class="text-start mb-2">Payments</h5>
+                                                    <p class="mb-4 text-muted tx-13 ms-0 text-start">Lorem Ipsum has
+                                                        been the industry's standard dummy text ever since</p>
+                                                </div>
+                                                <div class="card-pay">
+                                                    <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="tabs-menu">
+                                                        <li [ngbNavItem]="1">
+                                                          <a ngbNavLink><i class="fa fa-credit-card"></i>Credit Card</a>
+                                                          <ng-template ngbNavContent>
+                                                            <div class="tab-pane active show">
+                                                                <div class="bg-danger-transparent text-danger px-4 py-2 br-7 mb-4"
+                                                                    role="alert">Please Enter Valid Details</div>
+                                                                <div class="form-group">
+                                                                    <label class="form-label">CardHolder Name</label>
+                                                                    <input type="text" class="form-control"
+                                                                        placeholder="First Name">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="form-label">Card number</label>
+                                                                    <div class="input-group">
+                                                                        <input type="text" class="form-control"
+                                                                            placeholder="Search for...">
+                                                                        <span class="input-group-append">
+                                                                            <button class="btn btn-primary box-shadow-0"
+                                                                                type="button"><i class="fa fa-cc-visa"></i>
+                                                                                &nbsp; <i class="fa fa-cc-amex"></i> &nbsp;
+                                                                                <i class="fa fa-cc-mastercard"></i></button>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-sm-8">
+                                                                        <div class="form-group">
+                                                                            <label class="form-label">Expiration</label>
+                                                                            <div class="input-group">
+                                                                                <input type="number" class="form-control"
+                                                                                    placeholder="MM" name="Month">
+                                                                                <input type="number" class="form-control"
+                                                                                    placeholder="YY" name="Year">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-4">
+                                                                        <div class="form-group">
+                                                                            <label class="form-label">CVV <i
+                                                                                    class="fa fa-question-circle"></i></label>
+                                                                            <input type="number" class="form-control"
+                                                                                required="">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                          </ng-template>
+                                                        </li>
+                                                        <li [ngbNavItem]="2">
+                                                          <a ngbNavLink><i class="fa fa-paypal"></i> Paypal</a>
+                                                          <ng-template ngbNavContent>
+                                                            <div class="tab-pane">
+                                                                <p class="mt-4">Paypal is easiest way to pay online</p>
+                                                                <p><a href="javascript:void(0);" class="btn btn-primary"><i
+                                                                            class="fa fa-paypal"></i> Log in my Paypal</a>
+                                                                </p>
+                                                                <p class="mb-0"><strong>Note:</strong> Nemo enim ipsam
+                                                                    voluptatem quia voluptas sit aspernatur aut odit aut
+                                                                    fugit, sed quia consequuntur magni dolores eos qui
+                                                                    ratione voluptatem sequi nesciunt. </p>
+                                                            </div>
+                                                          </ng-template>
+                                                        </li>
+                                                        <li [ngbNavItem]="3">
+                                                          <a ngbNavLink><i class="fa fa-university"></i> Bank Transfer</a>
+                                                          <ng-template ngbNavContent>
+                                                            <div class="tab-pane">
+                                                                <p class="mt-4">Bank account details</p>
+                                                                <dl class="card-text">
+                                                                    <dt>BANK: </dt>
+                                                                    <dd> THE UNION BANK 0456</dd>
+                                                                </dl>
+                                                                <dl class="card-text">
+                                                                    <dt>Account number: </dt>
+                                                                    <dd> 67542897653214</dd>
+                                                                </dl>
+                                                                <dl class="card-text">
+                                                                    <dt>IBAN: </dt>
+                                                                    <dd>543218769</dd>
+                                                                </dl>
+                                                                <p class="mb-0"><strong>Note:</strong> Nemo enim ipsam
+                                                                    voluptatem quia voluptas sit aspernatur aut odit aut
+                                                                    fugit, sed quia consequuntur magni dolores eos qui
+                                                                    ratione voluptatem sequi nesciunt. </p>
+                                                            </div>
+                                                          </ng-template>
+                                                        </li>
+                                                      </ul>
+                                                      
+                                                      <div  class="mt-2"></div>
+                                                    <div class="tab-content mt-2" [ngbNavOutlet]="nav"></div>
+                                                </div>
+                                            </section>
+
+                                            <button class="btn btn-success pull-right" type="button" (click)="finish()"
+                                                [disabled]="!fourthStep.valid">Finish</button>
+                                            <button class="btn btn-secondary ms-1" type="button"
+                                                awPreviousStep>Previous</button>
+                                        </form>
+                                    </aw-wizard-completion-step>
+                                </aw-wizard>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row -->

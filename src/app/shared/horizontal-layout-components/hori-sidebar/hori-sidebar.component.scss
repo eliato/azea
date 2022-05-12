@@ -1,0 +1,35 @@
+@media (min-width:992px) {
+    .megaMenuCustom{
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media only screen and (max-width: 991px){
+    .horizontalMenu>.horizontalMenu-list>li a span {
+        display: inline-block;
+    }
+}
+@media (max-width:991.9px) {
+    .isexpanded{
+        display: block !important;
+    }
+}
+
+.bx{
+    line-height: 1 !important;
+}
+::ng-deep{
+    .light-menu .sub-side-menu__item {
+        color: #ccd4e0 !important;
+    }
+    .color-menu .sub-side-menu__item {
+        color: #ccd4e0 !important;
+    }
+    .dark-menu .sub-side-menu__item {
+        color: #ccd4e0 !important;
+    }
+    .gradient-menu .sub-side-menu__item {
+        color: #ccd4e0 !important;
+    }
+}

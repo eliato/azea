@@ -1,0 +1,36 @@
+<app-page-header [title]="'Image Crop'" [items]="['Apps']" [active_item]="'Image Crop'"></app-page-header>
+<!-- Row -->
+<div class="row mt-5" id="app">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Image Crop</div>
+            </div>
+            <div class="card-body p-0">
+                <div class="row g-0">
+                    <div class="col-lg-5 col-xl-6 border-end d-flex justify-content-center align-items-center">
+                        <img [src]="croppedImage" />
+                    </div>
+                    <div class="col-lg-7 col-xl-6">
+                        <!-- Row -->
+                        <input type="file" (change)="fileChangeEvent($event)" />
+
+                        <image-cropper
+                            [imageChangedEvent]="imageChangedEvent"
+                            [maintainAspectRatio]="true"
+                            [aspectRatio]="4 / 3"
+                            format="png"
+                            (imageCropped)="imageCropped($event)"
+                            (imageLoaded)="imageLoaded($event)"
+                            (cropperReady)="cropperReady()"
+                            (loadImageFailed)="loadImageFailed()"
+                        ></image-cropper>
+
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+::ng-deep{
+    app-faqs{
+        .panel-heading {
+            padding: 0;
+            border-radius: 0;
+            background-color: #f0f0f2 !important;
+            margin-bottom: 0.5rem !important;
+        }
+        .btn-link {
+            color: #664dc9 !important;
+            text-decoration: none !important;
+            width: 100%;
+            text-align: left;
+        }
+        .card-header{
+            padding: 0 !important;
+        }
+        .card-body{
+            background-color:  #fff;
+        }
+    }
+    .dark-mode{
+        app-faqs{
+            .panel-heading {
+                background-color: #212332 !important;
+            }
+            .btn-link {
+                color: #fff !important;
+            }
+            .btn-link:hover {
+                color: #664dc9 !important;
+            }
+            .card-body{
+                border: 1px solid #32394e;
+                background-color: #232735;
+                color: #d4d7e2 !important;
+            }
+        }
+    }
+    .rtl {
+        app-faqs{
+            .btn-link{
+                text-align: right;
+            }
+        }
+    }
+}

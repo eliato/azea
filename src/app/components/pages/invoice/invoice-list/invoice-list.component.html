@@ -1,0 +1,74 @@
+<app-page-header [title]="'Invoice List'" [items]="['Pages', 'Invoice']" [active_item]="'Invoice List'"></app-page-header>
+<!-- Row -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <a href="javascript:void(0);" class="btn btn-primary"><i class="fe fe-plus"></i> Add New Invoice</a>
+                    </div>
+                    <div class="col-md-6 col-auto">
+                    </div>
+                </div>
+                <div class="e-table">
+                    <div class="table-responsive">
+                        <table class="table table-vcenter text-nowrap border mb-0 table-hover" id="invoicedatatable">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>InvoiceID</th>
+                                    <th>User Name</th>
+                                    <th>Bill Date</th>
+                                    <th>Email</th>
+                                    <th>Amount</th>
+                                    <th>Bill Status</th>
+                                    <th>Options</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let list of invoicelist">
+                                    <td class="align-middle w-5">
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" name="example-checkbox2" value="option2">
+                                            <span class="custom-control-label"></span>
+                                        </label>
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="d-flex">
+                                            <div class="mt-1">
+                                                <a class="btn-link fs-16" href="javascript:void(0);">{{list.value}}</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-nowrap align-middle">
+                                        <img src="../../assets/images/files/file.png" alt="img" class="w-5 h-5 me-2 brround">
+                                        {{list.name}}
+                                    </td>
+                                    <td class="text-nowrap align-middle"><span>{{list.billDate}}</span></td>
+                                    <td class="text-nowrap align-middle">
+                                        {{list.email}}
+                                    </td>
+                                    <td class="text-nowrap align-middle"><span class="font-weight-bold">{{list.amount}}</span></td>
+                                    <td><span class="bg-{{list.billState}} px-2 py-1 text-white br-7">{{list.billStatus}}</span></td>
+                                    <td>
+                                        <div class="btn-group" ngbDropdown>
+                                            <a href="javascript:void(0);" class="btn btn-light btn-sm" ngbDropdownToggle aria-haspopup="true" data-bs-boundary="viewport" aria-expanded="false">Options <i class="fa fa-angle-down"></i></a>
+                                            <div ngbDropdownMenu>
+                                                <a ngbDropdownItem href="javascript:void(0);"><i class="fe fe-eye me-2"></i> View</a>
+                                                <a ngbDropdownItem href="javascript:void(0);"><i class="fe fe-share me-2"></i> Send</a>
+                                                <a ngbDropdownItem href="javascript:void(0);"><i class="fe fe-edit me-2"></i> Edit</a>
+                                                <a ngbDropdownItem href="javascript:void(0);"><i class="fe fe-trash me-2"></i> Delete</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row -->

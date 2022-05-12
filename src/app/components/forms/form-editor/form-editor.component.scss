@@ -1,0 +1,100 @@
+::ng-deep{
+    .dark-mode{
+        // angular editor
+        .angular-editor-toolbar {
+            background-color: #2a2e3f !important;
+            border: 1px solid #32394e !important;
+        }
+        .angular-editor-toolbar .angular-editor-toolbar-set .angular-editor-button {
+            background-color: #2a2e3f !important;
+            border: 1px solid #32394e !important;
+            color: #ccc;
+        }  
+        .ae-font .ae-picker-label {
+            background-color: #2a2e3f;
+            border: 1px solid #32394e;
+            color: #ccc;
+        }
+        .ae-font .ae-picker-label:before {
+            background: linear-gradient(90deg,#2a2e3f,#2a2e3f);
+            filter: contrast(0);
+        }
+        .ae-font .ae-picker-label:hover {
+            cursor: pointer;
+            background-color: #2a2e3f;
+            transition: .2s ease;
+        }
+        .ae-font .ae-picker-options .ae-picker-item {
+            background-color: #2a2e3f;
+            border: 0 solid #32394e;
+            color: #ccc;
+        }        
+        .ae-font.ae-expanded .ae-picker-options {
+            border-color: #32394e;
+        }    
+        .angular-editor .angular-editor-wrapper .angular-editor-textarea {
+            border: 1px solid #32394e !important;
+            outline: none;
+        }    
+        .angular-editor-button.active{
+            color: #654cc8 !important;
+        }
+        // ck editor
+        .ck.ck-editor__main>.ck-editor__editable {
+            background: #2a2e3f !important;
+        }
+        .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) {
+            border-color: #32394e !important;
+        }
+        .ck.ck-button, a.ck.ck-button {
+            background: #2a2e3f;
+            color: #ccc;
+        }
+        .ck.ck-toolbar {
+            background: #2a2e3f;
+            border: 1px solid #32394e;
+        }
+        .ck.ck-button:not(.ck-disabled):active, a.ck.ck-button:not(.ck-disabled):active {
+            background: #2a2e3f !important;
+        }
+        .ck.ck-button:not(.ck-disabled):hover,
+        a.ck.ck-button:not(.ck-disabled):hover{
+            background: #2a2e3f !important;
+        }
+        .ck.ck-button.ck-button_with-text:hover{
+            background:#212332 !important;
+        }
+        .ck.ck-dropdown__panel {
+            border: 1px solid #32394e;
+        }
+        .close{
+            color: #ccc;
+        }
+
+        // quill
+        .dark-mode .ql-toolbar.ql-snow {
+            border: 1px solid #32394e;
+            background: #212332;
+            color: #fff;
+        }
+        .ql-editor.ql-blank::before{
+            color: #ccc;
+        }
+        .dark-mode .ql-snow.ql-toolbar button:hover, .dark-mode .ql-snow .ql-toolbar button:hover, .dark-mode .ql-snow.ql-toolbar button:focus, .dark-mode .ql-snow .ql-toolbar button:focus, .dark-mode .ql-snow.ql-toolbar button.ql-active, .dark-mode .ql-snow .ql-toolbar button.ql-active, .dark-mode .ql-snow.ql-toolbar .ql-picker-label:hover, .dark-mode .ql-snow .ql-toolbar .ql-picker-label:hover, .dark-mode .ql-snow.ql-toolbar .ql-picker-label.ql-active, .dark-mode .ql-snow .ql-toolbar .ql-picker-label.ql-active, .dark-mode .ql-snow.ql-toolbar .ql-picker-item:hover, .dark-mode .ql-snow .ql-toolbar .ql-picker-item:hover, .dark-mode .ql-snow.ql-toolbar .ql-picker-item.ql-selected, .dark-mode .ql-snow .ql-toolbar .ql-picker-item.ql-selected {
+            color: #ffffff;
+            background: #2a2e3f;
+        }
+        .ql-snow .ql-picker {
+            color: #ccc;
+        }
+        .ql-toolbar.ql-snow .ql-picker.ql-expanded .ql-picker-label {
+            border-color: #32394e;
+        }
+        .ql-snow .ql-stroke{
+            stroke: #ccc;
+        }
+        .ql-picker-item.ql-selected{
+            color: #fff;
+        }
+    }
+}

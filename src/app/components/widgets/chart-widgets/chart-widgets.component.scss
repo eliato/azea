@@ -1,0 +1,11 @@
+
+::ng-deep{
+    .apexcharts-canvas svg{
+        transform: translate(5px ,0) !important;
+        overflow: visible !important;
+    }
+    .rtl .apexcharts-canvas svg{
+        transform: translate(-20px ,0) !important;
+        overflow: visible !important;
+    }
+}

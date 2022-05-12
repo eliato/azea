@@ -1,0 +1,28 @@
+<app-page-header [title]="'Gallery'" [items]="['Pages']" [active_item]="'Gallery'"></app-page-header>
+
+<!-- Row -->
+<div class="demo-gallery card"  [(ngbCollapse)]="isClosed" >
+    <div class="card-header">
+        <div class="card-title">Light Gallery</div>
+        <div class="card-options ">
+            <a href="javascript:void(0);" class="card-options-collapse me-2"  (click)="Collapsetoggle()" [attr.aria-expanded]="!isCollapsed"><i class="fe fe-chevron-{{ !isCollapsed ? 'up' : 'down'}}"></i></a>
+                <a href="javascript:;" class="card-options-remove" (click)="Closetoggle()" [attr.aria-expanded]="!isClosed">
+                    <i class="fe fe-x"></i>
+                </a>
+        </div>
+    </div>
+    <div class="card-body"  [(ngbCollapse)]="isCollapsed">
+        <ul id="lightgallery" class="list-unstyled row">
+            <li class="col-xs-6 col-sm-4 col-md-3 " *ngFor="let img of GalleryImage">
+                <a href="javascript:void(0)" class="wd-100p">
+                    <img class="img-responsive" [src]="img.modal.img" alt="Thumb"
+                        (click)="openImageModalRowDescription(img)">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <ks-modal-gallery [id]="1" [modalImages]="GalleryImage" [plainGalleryConfig]="customPlainGalleryRowDescConfig"
+        [currentImageConfig]="{downloadable : true}" [buttonsConfig]="buttonsConfigCustom">
+    </ks-modal-gallery>
+</div>
+<!-- End Row -->

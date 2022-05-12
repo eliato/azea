@@ -1,0 +1,18 @@
+.nav-link{
+    width: 100%;
+}
+.dropdown-toggle::after{
+    display: none;
+}
+
+::ng-deep{
+    .rtl .message-feed:not(.right) .mf-content{
+        margin-right: 15px !important;
+        margin-left: initial !important;
+    }
+    .rtl .chat-conatct-list .option-dots {
+        left: 10px !important;
+        right: inherit !important;
+        z-index: 3 !important;
+    }
+}

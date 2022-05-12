@@ -1,0 +1,62 @@
+<app-page-header [title]="'User List01'" [items]="['Apps', 'User List']" [active_item]="'User List01'"></app-page-header>
+<!-- Row -->
+<div class="row flex-lg-nowrap">
+    <div class="col-12">
+        <div class="row flex-lg-nowrap">
+            <div class="col-12 mb-3">
+                <div class="e-panel card">
+                    <div class="card-body">
+                        <div class="e-table">
+                            <div class="table-responsive table-lg mt-3">
+                                <table class="table table-bordered border-top text-nowrap">
+                                    <thead>
+                                        <tr>
+                                            <th class="align-top border-bottom-0 wd-5">Check</th>
+                                            <th class="border-bottom-0 w-20">User</th>
+                                            <th class="border-bottom-0 w-20">Date of joining</th>
+                                            <th class="border-bottom-0 w-20">Status</th>
+                                            <th class="border-bottom-0 w-20" >Role</th>
+                                            <th class="border-bottom-0 w-20">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let user1 of userlist01List ">
+                                            <td class="align-middle">
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="example-checkbox2" value="option2">
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </td>
+                                            <td class="align-middle">
+                                                <div class="d-flex">
+                                                    <span class="avatar brround avatar-md d-block" style="background-image: url({{user1.image}})"></span>
+                                                    <div class="ms-3 mt-1">
+                                                        <h6 class="mb-0 font-weight-bold mt-2">{{user1.user}}</h6>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="text-nowrap align-middle"><span>{{user1.dateOfJoin}}</span></td>
+                                            <td class="align-middle">
+                                                <div class="">
+                                                    <span class="bg-{{user1.statutsState}}-transparent text-{{user1.statutsState}} px-2 py-1 br-7 border-{{user1.statutsState}}">{{user1.statusText}}</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-nowrap align-middle">
+                                                {{user1.role}}
+                                            </td>
+                                            <td class="align-middle">
+                                                    <button class="btn btn-sm btn-info" type="button" data-bs-toggle="" data-bs-target="#user-form-modal">Edit</button>
+                                                    <button (click)="removeUserList(user1.id)" class="btn btn-sm btn-danger ms-2" type="button"><i class="fe fe-trash-2"></i></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row -->

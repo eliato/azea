@@ -1,0 +1,8 @@
+.dropdown-toggle:after{
+    display: none;
+}
+::ng-deep{
+    .rtl .dropdown-menu.dropdown-menu-end{
+        left: 0 !important;
+    }
+}

@@ -1,0 +1,11 @@
+::ng-deep{
+    .dark-mode{
+        .table-hover > tbody > tr:hover > *{
+            color: #fff;
+        }
+    }
+}
+
+.dropdown-toggle::after{
+    display: none;
+}

@@ -1,0 +1,19 @@
+::ng-deep{
+    @media screen and (max-width: 991.9px) {
+        .bs-popover-left{
+            transform : translate(7px, 34px) !important;
+        }
+        .bs-popover-right{
+            transform : translate(7px, 34px) !important;
+        }
+    }
+
+    .rtl {
+        .bs-popover-left{
+            transform : translate(7px, 34px) !important;
+        }
+        .bs-popover-right>.arrow, .bs-popover-auto[placement^="right"]>.arrow{
+            right: auto !important;
+        }
+    }
+}

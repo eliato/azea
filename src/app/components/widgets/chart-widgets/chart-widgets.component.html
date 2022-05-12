@@ -1,0 +1,372 @@
+<app-page-header [title]="'Chart Widgets'" [items]="['Widgets']" [active_item]="'Chart Widgets'"></app-page-header>
+
+
+<!--Row-->
+<div class="row">
+    <div class="col-xl-3 col-md-12 col-lg-6">
+        <div class="card overflow-hidden">
+            <div class="card-body pb-0">
+                <div>
+                    <p class=" mb-0">BTC / USDT</p>
+                    <h3 class="mb-1 font-weight-bold">$10513</h3>
+                </div>
+            </div>
+            <div class="card-body pt-0 pb-5 border-top-0 overflow-hidden">
+            <div class="chart-wrapper">
+                <canvas id="CryptoChart" class="areaChart overflow-hidden chart-dropshadow-primary" baseChart [datasets]="AreaChartData" [labels]="AreaChartLabels" [options]="AreaChartOptions"
+                    [colors]="AreaChartColors" [chartType]="AreaChartType">
+                </canvas>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-12 col-lg-6">
+        <div class="card overflow-hidden">
+            <div class="card-body pb-0">
+                <div>
+                    <p class=" mb-0">XEM / USDT</p>
+                    <h3 class="mb-1 font-weight-bold">$966</h3>
+                </div>
+            </div>
+            <div class="card-body pt-0 pb-5 border-top-0 overflow-hidden">
+                <div class="chart-wrapper ">
+                    <canvas id="CryptoChart1" class="areaChart overflow-hidden chart-dropshadow-primary" baseChart [datasets]="AreaChartData1" [labels]="AreaChartLabels" [options]="AreaChartOptions"
+                    [colors]="AreaChartColors1" [chartType]="AreaChartType">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-12 col-lg-6">
+        <div class="card overflow-hidden">
+            <div class="card-body pb-0">
+                <div>
+                    <p class=" mb-0">XRP / USDT</p>
+                    <h3 class="mb-1 font-weight-bold">$7,349</h3>
+                </div>
+            </div>
+            <div class="card-body pt-0 pb-5 border-top-0 overflow-hidden">
+                <div class="chart-wrapper ">
+                    <canvas id="CryptoChart2" class="areaChart overflow-hidden chart-dropshadow-primary" baseChart [datasets]="AreaChartData2" [labels]="AreaChartLabels" [options]="AreaChartOptions"
+                    [colors]="AreaChartColors2" [chartType]="AreaChartType">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-12 col-lg-6">
+        <div class="card overflow-hidden">
+            <div class="card-body pb-0">
+                <div>
+                    <p class=" mb-0">NEO / USDT</p>
+                    <h3 class="mb-1 font-weight-bold">$5,563</h3>
+                </div>
+            </div>
+            <div class="card-body pt-0 pb-5 border-top-0 overflow-hidden">
+                <div class="chart-wrapper ">
+                    <canvas id="CryptoChart3" class="areaChart overflow-hidden chart-dropshadow-primary" baseChart [datasets]="AreaChartData3" [labels]="AreaChartLabels" [options]="AreaChartOptions"
+                    [colors]="AreaChartColors3" [chartType]="AreaChartType">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End Row-->
+<!--Row-->
+<div class="row">
+    <div class="col-xl-3 col-md-12 col-lg-6">
+        <div class="card overflow-hidden bg-primary text-white">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <div class="mb-2 fs-18">
+                            Total Application
+                        </div>
+                        <h1 class="font-weight-bold mb-1">4,675</h1>
+                        <span class=""><i class="fa fa-arrow-up me-1"></i> +1.4%</span>
+                    </div>
+                    <div class="col col-auto">
+                        <circle-progress class="mx-auto chart-circle chart-circle-md  mt-sm-0 mb-0" [percent]="85" [radius]="32" [space]="-5" [outerStrokeWidth]="5"
+                        [innerStrokeWidth]="5" [showInnerStroke]="true" [outerStrokeColor]="'#4422c9'"
+                        [innerStrokeColor]="'#c1b6ed'" [titleFontSize]="'14'" [showSubtitle]="false" [animation]="true" [animationDuration]="1000">
+                        </circle-progress>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-12 col-lg-6">
+        <div class="card overflow-hidden bg-danger text-white">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <div class="mb-2 fs-18">
+                            Shortlisted
+                        </div>
+                        <h1 class="font-weight-bold mb-1">3,175</h1>
+                        <span class=""><i class="fa fa-arrow-up me-1"></i> +1.8%</span>
+                    </div>
+                    <div class="col col-auto">
+                        <circle-progress class="mx-auto chart-circle chart-circle-md  mt-sm-0 mb-0" [percent]="85" [radius]="32" [space]="-5" [outerStrokeWidth]="5"
+                        [innerStrokeWidth]="5" [showInnerStroke]="true" [outerStrokeColor]="'#eb2323'"
+                        [innerStrokeColor]="'#e9bfbf'" [titleFontSize]="'14'" [showSubtitle]="false" [animation]="true" [animationDuration]="1000">
+                        </circle-progress>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-12 col-lg-6">
+        <div class="card overflow-hidden bg-success text-white">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <div class="mb-2 fs-18">
+                            Rejected
+                        </div>
+                        <h1 class="font-weight-bold mb-1">7,745</h1>
+                        <span class=""><i class="fa fa-arrow-down me-1"></i> -2.4%</span>
+                    </div>
+                    <div class="col col-auto">
+                        <circle-progress class="mx-auto chart-circle chart-circle-md  mt-sm-0 mb-0" [percent]="85" [radius]="32" [space]="-5" [outerStrokeWidth]="5"
+                        [innerStrokeWidth]="5" [showInnerStroke]="true" [outerStrokeColor]="'#008a4c'"
+                        [innerStrokeColor]="'#abddc7'" [titleFontSize]="'14'" [showSubtitle]="false" [animation]="true" [animationDuration]="1000">
+                        </circle-progress> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-12 col-lg-6">
+        <div class="card overflow-hidden bg-warning text-white">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <div class="mb-2 fs-18">
+                            Rejected
+                        </div>
+                        <h1 class="font-weight-bold mb-1">7,745</h1>
+                        <span class=""><i class="fa fa-arrow-down me-1"></i> -2.4%</span>
+                    </div>
+                    <div class="col col-auto">
+                        <circle-progress class="mx-auto chart-circle chart-circle-md  mt-sm-0 mb-0" [percent]="85" [radius]="32" [space]="-5" [outerStrokeWidth]="5"
+                        [innerStrokeWidth]="5" [showInnerStroke]="true" [outerStrokeColor]="'#d18d02'"
+                        [innerStrokeColor]="'#e3cd9f'" [titleFontSize]="'14'" [showSubtitle]="false" [animation]="true" [animationDuration]="1000">
+                        </circle-progress>   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Row-->
+<div class="row">
+    <div class="col-xl-3 col-md-12 col-lg-6">
+        <div class="card">
+            <div class="card-body">
+                <div class="row text-center">
+                    <div class="col">
+                        <div>
+                            <apx-chart class="bar-colours-1" [chart]="ApexSparklines1.chart" [plotOptions]="ApexSparklines1.plotOptions"
+                                [series]="ApexSparklines1.series" [colors]="ApexSparklines1.colors"
+                                [tooltip]="ApexSparklines1.tooltip">
+                            </apx-chart>
+                        </div>
+                    </div>
+                    <div class="col col-auto">
+                        <div class="mb-2 fs-18">
+                            Rejected
+                        </div>
+                        <h3 class="font-weight-bold mb-1">1,745</h3>
+                        <span class="text-danger"><i class="fa fa-arrow-down me-1"></i> -2.4%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-12 col-lg-6">
+        <div class="card">
+            <div class="card-body">
+                <div class="row text-center">
+                    <div class="col">
+                        <!-- <div> -->
+                            <apx-chart class="bar-colours-2" [chart]="ApexSparklines2.chart" [plotOptions]="ApexSparklines2.plotOptions"
+                                [series]="ApexSparklines2.series" [colors]="ApexSparklines2.colors"
+                                [tooltip]="ApexSparklines2.tooltip">
+                            </apx-chart>
+                        <!-- </div> -->
+                    </div>
+                    <div class="col col-auto">
+                        <div class="mb-2 fs-18">
+                            Accepted
+                        </div>
+                        <h3 class="font-weight-bold mb-1">3,845</h3>
+                        <span class="text-success"><i class="fa fa-arrow-up me-1"></i> -2.4%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-12 col-lg-6">
+        <div class="card">
+            <div class="card-body">
+                <div class="row text-center">
+                    <div class="col">
+                        <div>
+                            <apx-chart class="bar-colours-3" [chart]="ApexSparklines3.chart" [plotOptions]="ApexSparklines3.plotOptions"
+                                [series]="ApexSparklines3.series" [colors]="ApexSparklines3.colors"
+                                [tooltip]="ApexSparklines3.tooltip">
+                            </apx-chart>
+                        </div>
+                    </div>
+                    <div class="col col-auto">
+                        <div class="mb-2 fs-18">
+                            Pending
+                        </div>
+                        <h3 class="font-weight-bold mb-1">745</h3>
+                        <span class="text-danger"><i class="fa fa-arrow-down me-1"></i> -2.4%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-12 col-lg-6">
+        <div class="card">
+            <div class="card-body">
+                <div class="row text-center">
+                    <div class="col">
+                        <div>
+                            <apx-chart class="bar-colours-4" [chart]="ApexSparklines4.chart" [plotOptions]="ApexSparklines4.plotOptions"
+                                [series]="ApexSparklines4.series" [colors]="ApexSparklines4.colors"
+                                [tooltip]="ApexSparklines4.tooltip">
+                            </apx-chart>
+                        </div>
+                    </div>
+                    <div class="col col-auto">
+                        <div class="mb-2 fs-18">
+                            Succeeded
+                        </div>
+                        <h3 class="font-weight-bold mb-1">745</h3>
+                        <span class="text-success"><i class="fa fa-arrow-down me-1"></i> -2.4%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End row-->
+<div class="row">
+    <div class="col-xl-3 col-md-12 col-lg-6">
+        <div class="card overflow-hidden">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <p class="mb-1">Today Revenue</p>
+                        <h2 class="mb-0 font-weight-bold text-success">$897k</h2>
+                    </div>
+                    <div class="col">
+                        <apx-chart class="chart-dropshadow-info" [chart]="ApexData1.chart" [stroke]="ApexData1.stroke" [fill]="ApexData1.fill"
+                        [series]="ApexData1.series" [yaxis]="ApexData1.yaxis" [colors]="ApexData1.colors">
+                        </apx-chart>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-12 col-lg-6">
+        <div class="card overflow-hidden">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <p class="mb-1">Unique Visitors</p>
+                        <h2 class="mb-0 font-weight-bold text-primary">5,896</h2>
+                    </div>
+                    <div class="col">
+                        <apx-chart class="chart-dropshadow-info" [chart]="ApexData2.chart" [stroke]="ApexData2.stroke" [fill]="ApexData2.fill"
+                        [series]="ApexData2.series" [yaxis]="ApexData2.yaxis" [colors]="ApexData2.colors">
+                        </apx-chart>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-12 col-lg-6">
+        <div class="card overflow-hidden">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <p class="mb-1">Expenses</p>
+                        <h2 class="mb-0 font-weight-bold text-teal">$1,678</h2>
+                    </div>
+                    <div class="col">
+                        <apx-chart class="chart-dropshadow-info" [chart]="ApexData3.chart" [stroke]="ApexData3.stroke" [fill]="ApexData3.fill"
+                        [series]="ApexData3.series" [yaxis]="ApexData3.yaxis" [colors]="ApexData3.colors">
+                        </apx-chart>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-12 col-lg-6">
+        <div class="card overflow-hidden">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <p class="mb-1">Today Profit</p>
+                        <h2 class="mb-0 font-weight-bold text-danger">$817k</h2>
+                    </div>
+                    <div class="col">
+                        <apx-chart class="chart-dropshadow-info" [chart]="ApexData4.chart" [stroke]="ApexData4.stroke" [fill]="ApexData4.fill"
+                        [series]="ApexData4.series" [yaxis]="ApexData4.yaxis" [colors]="ApexData4.colors">
+                        </apx-chart>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Row -->
+<div class="row">
+    <div class="col-xl-3 col-md-12 col-lg-6">
+        <div class="card mg-b-md-20">
+            <div class="card-body">
+                <div class="row">
+                        <apx-chart [series]="donutData.pieseries" [colors]="donutData.colors" [chart]="donutData.chart"
+                            [responsive]="donutData.responsive" [legend]="donutData.legend"></apx-chart>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-12 col-lg-6 p-l-0 p-r-0">
+        <div class="card mg-b-md-20">
+            <div class="card-body">
+                <div class="row">
+                        <apx-chart [series]="donutData1.pieseries" [colors]="donutData1.colors" [chart]="donutData1.chart"
+                        [responsive]="donutData1.responsive" [legend]="donutData1.legend"></apx-chart>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-12 col-lg-6 p-l-0">
+        <div class="card mg-b-md-20">
+            <div class="card-body">
+                <div class="row">
+                        <apx-chart [series]="donutData2.pieseries" [colors]="donutData2.colors" [chart]="donutData2.chart"
+                        [responsive]="donutData2.responsive" [legend]="donutData2.legend"></apx-chart>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-12 col-lg-6 p-l-0">
+        <div class="card mg-b-md-20">
+            <div class="card-body">
+                <div class="row">
+                        <apx-chart [series]="donutData3.pieseries" [colors]="donutData3.colors" [chart]="donutData3.chart"
+                        [responsive]="donutData3.responsive" [legend]="donutData3.legend"></apx-chart>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row -->

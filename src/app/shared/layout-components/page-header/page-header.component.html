@@ -1,0 +1,24 @@
+<!-- PAGE-HEADER -->
+<div class="page-header">
+    <div class="page-leftheader">
+        <h1 class="page-title mb-0 text-primary">{{title}}</h1>
+    </div>
+    <div class="page-rightheader">
+        <div class="btn-list" ngbDropdown>
+            <button  class="btn btn-outline-primary"><i class="fe fe-download me-2"></i>
+                Import</button>
+            <a href="javascript:void(0);"  class="btn btn-primary btn-pill" ngbDropdownToggle>
+                <i class="fa fa-calendar me-2 fs-14"></i> Search By Date</a>
+            <div ngbDropdownMenu class="border-0">
+                    <a ngbDropdownItem href="javascript:void(0);">Today</a>
+                    <a ngbDropdownItem href="javascript:void(0);">Yesterday</a>
+                    <a ngbDropdownItem class="dactive" href="javascript:void(0);">Last 7 days</a>
+                    <a ngbDropdownItem href="javascript:void(0);">Last 30 days</a>
+                    <a ngbDropdownItem href="javascript:void(0);">Last Month</a>
+                    <a ngbDropdownItem href="javascript:void(0);">Last 6 months</a>
+                    <a ngbDropdownItem href="javascript:void(0);">Last year</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- PAGE-HEADER END -->

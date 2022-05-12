@@ -1,0 +1,25 @@
+.open{
+    display: block;
+}
+
+::ng-deep{
+    .dark-mode.light-menu .slide-menu a.active {
+        color: #664dc9 !important;
+    }
+    .bx{
+        line-height: 1 !important;
+    }
+
+    .light-menu .sub-side-menu__item {
+        color: #ccd4e0 !important;
+    }
+    .color-menu .sub-side-menu__item {
+        color: #ccd4e0 !important;
+    }
+    .dark-menu .sub-side-menu__item {
+        color: #ccd4e0 !important;
+    }
+    .gradient-menu .sub-side-menu__item {
+        color: #ccd4e0 !important;
+    }
+}

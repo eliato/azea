@@ -1,0 +1,19 @@
+::ng-deep{
+    .text-warning {
+        color: #ffab00 !important;
+    }
+    .text-success, .text-success:hover, a.text-success:focus {
+        color: #15ca7c !important;
+    }
+    .text-danger, a.text-danger:hover, a.text-danger:focus {
+        color: #df0812 !important;
+    }
+    .dark-mode{
+        .text-primary.active{
+            color: #fff !important;
+        }
+        .text-white.active{
+            color: #664dc9 !important;
+        }
+    }
+}

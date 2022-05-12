@@ -1,0 +1,7 @@
+.dropdown-toggle::after{
+    display: none;
+}
+.rtl .dropdown-menu-start{
+    left: initial !important;
+    right: 0 !important;
+}

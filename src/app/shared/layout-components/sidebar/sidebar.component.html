@@ -1,0 +1,108 @@
+<!-- Sidemenu -->
+<aside class="app-sidebar">
+    <div class="app-sidebar__logo">
+        <a class="header-brand" routerLink="/dashboard">
+            <img src="../../../../assets/images/brand/logo.png" class="header-brand-img desktop-lgo" alt="Azea logo">
+            <img src="../../../../assets/images/brand/logo1.png" class="header-brand-img dark-logo" alt="Azea logo">
+            <img src="../../../../assets/images/brand/favicon.png" class="header-brand-img mobile-logo" alt="Azea logo">
+            <img src="../../../../assets/images/brand/favicon1.png" class="header-brand-img darkmobile-logo" alt="Azea logo">
+        </a>
+    </div>
+    <perfect-scrollbar>
+    <ul class="side-menu app-sidebar3">
+            <!-- 1st Level Menu -->
+            <li class="slide" *ngFor="let menuItem of menuItems" 
+                [ngClass]="{active: menuItem.active, 'is-expanded': menuItem.active, 'side-item side-item-category':menuItem.headTitle,
+                'slide':menuItem.title}">
+                <span *ngIf="menuItem.headTitle">
+                    {{menuItem.headTitle}}
+                </span>
+                <!-- has-Link -->
+                <a class="side-menu__item" [routerLink]="!menuItem.type ? null : [menuItem.path]" 
+                    *ngIf="menuItem.type === 'link' " 
+                    routerLinkActive="active"
+                    (click)="toggleNavActive(menuItem)">
+                    <span class="shape1"></span>
+                    <i class="bx bx-{{menuItem.icon}} side-menu__icon"></i>
+                    <span class="side-menu__label">{{menuItem.title}}</span>
+                </a>
+                <!-- has-Sub -->
+                <a class="side-menu__item" [routerLink]="menuItem.type ? null: [menuItem.path]"
+                    *ngIf="menuItem.type === 'sub'" 
+                    (click)="toggleNavActive(menuItem)"
+                    [ngClass]="{'active': menuItem.active}">
+                    <span class="shape1"></span>
+                    <span class="shape2"></span>
+                    <i class="bx bx-{{menuItem.icon}} side-menu__icon"></i>
+                    <span class="side-menu__label">{{menuItem.title}}</span>
+                    <span class="shape2"></span>
+                    <span class="badge bg-{{menuItem.badgeClass}} side-badge"
+                        *ngIf="menuItem.badgeClass && menuItem.badgeValue">
+                        {{menuItem.badgeValue}}
+                    </span>
+                    <i class="angle fe fe-chevron-right" [ngClass]="{ 'd-none': menuItem.badgeClass}"></i>
+
+                </a>
+
+                <!-- 2nd Level menu -->
+                <ul class="slide-menu" *ngIf="menuItem.children"
+                    [ngClass]="{'open': menuItem.active}">
+                    <li class="sub-slide" *ngFor="let childrenItem of menuItem.children"
+                        [ngClass]="{'is-expanded': childrenItem.active}">
+
+                        <!-- link -->
+                        <a class="sub-side-menu__item" routerLinkActive="active" [routerLink]="!childrenItem.type ? null : [childrenItem.path] "
+                            *ngIf="childrenItem.type === 'link' " (click)="toggleNavActive(childrenItem)">
+                            {{childrenItem.title}}
+                        </a>
+
+                        <!-- sub -->
+                        <a class="sub-side-menu__item" [routerLink]="childrenItem.type ? null : [childrenItem.path]"
+                                *ngIf="childrenItem.type === 'sub'"  routerLinkActive="active"
+                            (click)="toggleNavActive(childrenItem)"
+                            [ngClass]="{'active': childrenItem.active}">
+                            {{childrenItem.title}}
+                            <i class="sub-angle fe fe-chevron-right"></i>
+                        </a>
+
+                        <!-- 3rd Level menu -->
+                        <ul class="sub-slide-menu" *ngIf="childrenItem.children"
+                        [ngClass]="{'open': childrenItem.active}">
+                            <li *ngFor="let childrenSubItem of childrenItem.children"
+                            [ngClass]="{'is-expanded': childrenSubItem.active}">
+                                <!-- link -->
+                                <a class="sub-slide-item" routerLinkActive="active"
+                                    [routerLink]="!childrenSubItem.type ? null : [childrenSubItem.path]"
+                                    *ngIf="childrenSubItem.type === 'link'">
+                                    {{childrenSubItem.title}}
+                                </a>
+                                <!-- sub -->
+                                <a class="sub-slide-item"  routerLinkActive="active"
+                                    [routerLink]="childrenSubItem.type ? null : [childrenSubItem.path]"
+                                    *ngIf="childrenSubItem.type === 'sub'" (click)="toggleNavActive(childrenSubItem)">
+                                    {{childrenSubItem.title}}
+                                    <i class="angle fe fe-chevron-right"></i>
+                                </a>
+
+                                <!--4th level -->
+                                <ul class="slide-menu" *ngIf="childrenSubItem.children">
+                                    <li *ngFor="let childrenSubItem1 of childrenSubItem.children" 
+                                    [ngClass]="{'is-expanded': childrenSubItem1.active}">
+                                        <a class="sub-slide-item" [routerLink]="!childrenSubItem1.type ? [childrenSubItem1.path] : null " routerLinkActive="active"
+                                        *ngIf="childrenSubItem1.type === 'link'">
+                                        {{childrenSubItem1.title}}</a>
+                                    </li>
+                                </ul>
+
+
+
+                            </li>
+                        </ul>
+
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </perfect-scrollbar>
+</aside>
+<!-- End Sidemenu -->

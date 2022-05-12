@@ -1,0 +1,19 @@
+<div class="horizontalMenucontainer">
+    <!-- switcher -->
+    <app-hori-switcher></app-hori-switcher>
+    <div class="page">
+        <div class="page-main">
+            <!-- header -->
+            <app-hori-header></app-hori-header>
+            <!-- sidebar -->
+            <app-hori-sidebar></app-hori-sidebar>
+            <div class="hor-content main-content" [ngClass]="{ 'pt-53': scrolled }">
+                <div class="container" (click)="clickOnBody()">
+                    <router-outlet> </router-outlet>
+                </div>
+            </div>
+            <!-- footer  -->
+            <app-footer></app-footer>
+        </div>
+    </div>
+</div>
